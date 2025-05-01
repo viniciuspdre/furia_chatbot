@@ -1,13 +1,12 @@
 import HLTV from 'hltv';
-
-const FURIA_ID = 8297;
+import { HLTV_FURIA_ID } from '../constants/ids';
 
 export const getNextMatches = async () => {
-  const matches = await HLTV.getMatches({ teamIds: [FURIA_ID] });
+  const matches = await HLTV.getMatches({ teamIds: [HLTV_FURIA_ID] });
   return matches;
 }
 
 export const getCurrentLineUp = async () => {
-  const team = await HLTV.getTeam({ id: FURIA_ID })
+  const team = await HLTV.getTeam({ id: HLTV_FURIA_ID });
   return team;
 }
