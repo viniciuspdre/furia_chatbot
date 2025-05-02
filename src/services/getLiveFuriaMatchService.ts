@@ -1,9 +1,9 @@
 import { PANDASCORE_FURIA_ID } from "../constants/ids";
-import { axiosInstance } from "../utils/axiosInstace";
+import { axiosForPandaScore } from "../utils/axiosInstace";
 
 export const liveFuriaMatch = async () => {
   try {
-    const response = await axiosInstance.get<any[]>("/matches/running", {
+    const response = await axiosForPandaScore.get<any[]>("/matches/running", {
       params: {
         per_page: 50,
       },

@@ -1,9 +1,9 @@
 import { PANDASCORE_FURIA_ID } from "../constants/ids";
-import { axiosInstance } from "../utils/axiosInstace";
+import { axiosForPandaScore } from "../utils/axiosInstace";
 
 export const upComingFuriaMatches = async (limit: number) => {
   try {
-    const response = await axiosInstance.get<any[]>("/matches/upcoming", {
+    const response = await axiosForPandaScore.get<any[]>("/matches/upcoming", {
       params: {
         sort: "begin_at",
         page: 1,

@@ -7,6 +7,6 @@ export const lineUp = async (bot: TelegramBot) => {
   const line: FullTeam = await getCurrentLineUp();
   const answer = line.players.map(p => `${p.name}`).join('\n');
   bot.onText(/\lineup/, (msg) => {
-    bot.sendMessage(msg.chat.id, answer || 'Não há players na FURIA.')
+    bot.sendMessage(msg.chat.id, `Nosso jogadores e coaches atualmente são👪:\n\n${answer}` || 'Não há players na FURIA.')
   })
 }
