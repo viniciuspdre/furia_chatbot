@@ -5,9 +5,10 @@ import { axiosForTwitter } from "../utils/axiosInstace";
 
 export const getLastestFuriaTweets = async (limit: number = 1): Promise<TweetData[] | null> => {
   try {
-    const response = await axiosForTwitter.get<TwitterApiResponse>(`/users/${FURIA_TWITTER_ID}/tweets`, {
+    const response = await axiosForTwitter.get<TwitterApiResponse>(`/users/${Number(FURIA_TWITTER_ID)}/tweets`, {
       params: {
         max_results: limit,
+        "tweet.fields": ["id", "text", "created_at"]
       }
     });
   
