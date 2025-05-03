@@ -8,7 +8,6 @@ export const getLastestFuriaTweets = async (limit: number = 1): Promise<TweetDat
     const response = await axiosForTwitter.get<TwitterApiResponse>(`/users/${FURIA_TWITTER_ID}/tweets`, {
       params: {
         max_results: limit,
-        exclude: ['retweets']
       }
     });
   
