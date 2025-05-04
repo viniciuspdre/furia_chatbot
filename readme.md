@@ -77,9 +77,10 @@ TELEGRAM_TOKEN=seu_token_do_bot_aqui
 
 PANDASCORE_TOKEN=seu_token_pandascore
 TWITTER_BEARER_TOKEN=seu_token_twitter
+```
 
 ## ▶️ Como Rodar
-###Instale as dependências:
+### Instale as dependências:
 
 ```bash
 npm install
