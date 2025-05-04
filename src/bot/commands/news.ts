@@ -7,7 +7,7 @@ export const news = async (bot: TelegramBot) => {
     const chatId = msg.chat.id;
     bot.sendMessage(chatId, '📰 Buscando as últimas notícias da FURIA no Twitter...')
     
-    const tweets = await getLastestFuriaTweets(3);
+    const tweets = await getLastestFuriaTweets();
 
     if(!tweets || tweets.length === 0) {
       bot.sendMessage(chatId, '❌ Não consegui encontrar notícias recentes da FURIA.');

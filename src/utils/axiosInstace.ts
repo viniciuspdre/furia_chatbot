@@ -8,7 +8,7 @@ export const axiosForPandaScore = axios.create({
 });
 
 export const axiosForTwitter = axios.create({
-  baseURL: 'https://api.twitter.com/2',
+  baseURL: 'https://api.x.com/2',
   headers: {
     Authorization: `Bearer ${process.env.TWITTER_BEARER_TOKEN}`,
   }

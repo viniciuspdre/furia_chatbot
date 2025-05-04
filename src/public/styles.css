@@ -39,6 +39,7 @@ body {
 
 .sobre h1 {
   font-size: 2.5rem;
+  width: fit-content;
 }
 
 .sobre img {
@@ -46,7 +47,8 @@ body {
 }
 
 .sobre p {
-  width: 700px;
+  width: fit-content;
+  padding: 0px 20px;
   text-align: center;
   font-weight: 500;
 }
